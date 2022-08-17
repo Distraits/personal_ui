@@ -1,18 +1,28 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <p-button type="primary">hh</p-button>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
+import p_button from "../components/p_button/p_button";
 export default {
   name: 'HomeView',
-  components: {
-    HelloWorld
+  data() {
+    return {
+
+    }
+  },
+  components:{
+    'p-button':p_button,
+  },
+
+  mounted() {
+
+  },
+  methods:{
+
   }
 }
 </script>
