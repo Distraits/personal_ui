@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <p-button type="primary">hh</p-button>
+    <p-button type="success" plain>hh</p-button>
   </div>
 </template>
 

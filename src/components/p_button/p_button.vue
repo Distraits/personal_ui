@@ -1,5 +1,7 @@
 <template>
-<button class="btn-normal" :class="`btn-${type}`">
+<button class="btn-normal" :class="[`btn-${type}`,{
+  'is-plain':plain
+}]" >
   <slot></slot>
 </button>
 </template>
@@ -11,6 +13,10 @@ export default {
     type:{
       type: String,
       default:''
+    },
+    plain:{
+      type:Boolean,
+      default: false
     }
   }
 }
@@ -52,10 +58,76 @@ export default {
   }
   &:active {
     border-color: #3a8ee6;
+    background-color: #3a8ee6;
     color: #ffffff;
     outline: none;
   }
 }
+
+
+.btn-success{
+  color: #fff;
+  background-color: #67c23a;
+  border-color: #67c23a;
+  &:hover,
+  &:focus {
+    background: #85ce61;
+    border-color: #85ce61;
+    color: #fff;
+  }
+  &:active{
+    background: #5daf34;
+    border-color: #5daf34;
+    color: #fff;
+  }
+}
+
+.btn-danger{
+  color: #fff;
+  background-color: #f56c6c;
+  border-color: #f56c6c;
+  &:hover,
+  &:focus {
+    background: #f78989;
+    border-color: #f78989;
+    color: #fff;
+  }
+  &:active{
+    background: #dd6161;
+    border-color: #dd6161;
+    color: #fff;
+  }
+}
+
+
+
+
+//朴素按钮
+.btn-normal.is-plain{
+  &:hover,&:focus{
+    background: #fff;
+    border-color: #409eff;
+    color: #409eff;
+  }
+  &:active {
+    color: #3a8ee6;
+    border-color: #3a8ee6;
+  }
+}
+
+
+.btn-primary.is-plain{
+  color: #409eff;
+  background: #ecf5ff;
+  border-color: #b3d8ff;
+}
+
+.btn-success.is-plain{
+  color: #67c23a;
+  background: #f0f9eb;
+  border-color: #c2e7b0;
+}
+
 
 
 
