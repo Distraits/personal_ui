@@ -1,6 +1,6 @@
 <template>
 <button class="btn-normal" :class="[`btn-${type}`,{
-  'is-plain':plain
+  'is-plain':plain,'is-round':round,'is-disabled':disabled
 }]" >
   <slot></slot>
 </button>
@@ -17,6 +17,14 @@ export default {
     plain:{
       type:Boolean,
       default: false
+    },
+    round:{
+      type:Boolean,
+      default: false
+    },
+    disabled:{
+      type:Boolean,
+      default: false
     }
   }
 }
@@ -25,7 +33,7 @@ export default {
 <style scoped lang="scss">
 .btn-normal{
   display: inline-block;
-  padding: 12px 40px;
+  padding: 12px 20px;
   background: #fff;
   border: 1px solid #dcdfe6;
   border-radius: 3px;
@@ -47,59 +55,43 @@ export default {
   }
 }
 
-.btn-primary{
-  color: #fff;
-  background: #409eff;
-  border-color: #dcdfe6;
-  &:hover,&:focus{
-    color: #ffffff;
-    border-color: #66b1ff;
-    background-color: #66b1ff;
+@mixin btn-color($color,$bg-color,$br-color){
+  color: $color;
+  background: $bg-color;
+  border-color: $br-color;
+}
+
+@mixin pseudo-class($color,$bc_hover,$bc_active){
+  &:hover,
+  &:focus {
+    background: $bc_hover;
+    border-color: $bc_hover;
+    color: $color;
   }
-  &:active {
-    border-color: #3a8ee6;
-    background-color: #3a8ee6;
-    color: #ffffff;
+  &:active{
+    background: $bc_active;
+    border-color: $bc_active;
+    color: $color;
     outline: none;
   }
 }
 
 
+.btn-primary{
+  @include btn-color(#fff,#409eff,#409eff);
+  @include pseudo-class(#fff,#66b1ff,#3a8ee6)
+}
+
+
 .btn-success{
-  color: #fff;
-  background-color: #67c23a;
-  border-color: #67c23a;
-  &:hover,
-  &:focus {
-    background: #85ce61;
-    border-color: #85ce61;
-    color: #fff;
-  }
-  &:active{
-    background: #5daf34;
-    border-color: #5daf34;
-    color: #fff;
-  }
+  @include btn-color(#fff,#67c23a,#67c23a);
+  @include pseudo-class(#fff,#85ce61,#5daf34)
 }
 
 .btn-danger{
-  color: #fff;
-  background-color: #f56c6c;
-  border-color: #f56c6c;
-  &:hover,
-  &:focus {
-    background: #f78989;
-    border-color: #f78989;
-    color: #fff;
-  }
-  &:active{
-    background: #dd6161;
-    border-color: #dd6161;
-    color: #fff;
-  }
+  @include btn-color(#fff,#f56c6c,#f56c6c);
+  @include pseudo-class(#fff,#f78989,#dd6161)
 }
-
-
 
 
 //朴素按钮
@@ -117,16 +109,39 @@ export default {
 
 
 .btn-primary.is-plain{
-  color: #409eff;
-  background: #ecf5ff;
-  border-color: #b3d8ff;
+  @include btn-color(#409eff,#ecf5ff,#b3d8ff);
+  @include pseudo-class(#fff,#66b1ff,#3a8ee6)
 }
 
 .btn-success.is-plain{
-  color: #67c23a;
-  background: #f0f9eb;
-  border-color: #c2e7b0;
+  @include btn-color(#67c23a,#f0f9eb,#c2e7b0);
+  @include pseudo-class(#fff,#85ce61,#5daf34)
 }
+
+.btn-danger.is-plain{
+  @include btn-color(#fff,#f56c6c,#f56c6c);
+  @include pseudo-class(#fff,#f78989,#dd6161)
+}
+
+//圆角
+.btn-normal.is-round{
+  border-radius: 20px;
+  padding: 12px 23px;
+}
+
+//禁用
+.btn-normal.is-disabled {
+  &{
+    opacity: .7;
+  }
+  &:hover,
+  &:focus {
+    cursor: not-allowed;
+    background-image: none;
+  }
+}
+
+
 
 
 

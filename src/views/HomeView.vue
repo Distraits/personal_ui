@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <p-button type="success" plain>hh</p-button>
+    <p-button type="primary" round plain disabled>hh</p-button>
   </div>
 </template>
 
