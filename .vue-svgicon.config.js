@@ -1,6 +1,6 @@
 const path = require('path')
 const svgFilePaths = [
-    './src/assets/icons'
+    './examples/assets/icons'
 ].map((v) => path.resolve(v))
 const tagName = 'icon'
 
