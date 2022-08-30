@@ -1,5 +1,5 @@
 {
-  "name": "personal_ui",
+  "name": "qike-ui",
   "version": "0.1.1",
   "private": false,
   "scripts": {
@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lib": "vue-cli-service build --target lib src/index.js"
   },
-  "main": "./dist/personal_ui.umd.js",
+  "main": "/dist/personal_ui.umd.js",
   "author": "xq",
   "dependencies": {
     "@yzfe/svgicon": "^1.1.0",
