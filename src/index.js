@@ -1,12 +1,12 @@
-import p_button from "../packages/p_button";
-import p_input from "../packages/p_input";
+import button from "../packages/button";
+import input from "../packages/input";
 
 
 
 // 存储组件列表
 const components = [
-    p_button,
-    p_input,
+    button,
+    input,
 ]
 
 const install = function (Vue, options = {}) {
@@ -23,6 +23,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default{
     install,
-    p_button,
-    p_input,
+    button,
+    input,
 }

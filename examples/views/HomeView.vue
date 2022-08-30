@@ -8,7 +8,7 @@
 <script>
 
 import p_button from "../components/p_button/p_button";
-import p_input from "@/components/p_input/p_input";
+import p_input from "@/components/input/input";
 export default {
   name: 'HomeView',
   data() {
