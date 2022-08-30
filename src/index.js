@@ -1,5 +1,5 @@
-import Button from "../packages/button";
-import Input from "../packages/input";
+import Button from "../packages/button/index.js";
+import Input from "../packages/input/index.js";
 
 
 
