@@ -1,7 +1,7 @@
-import Input from "./input";
+import PInput from "./input";
 
-Input.install=(Vue)=>{
-    Vue.component(Input.name,Input)
+PInput.install=function(Vue){
+    Vue.component(PInput.name,PInput)
 }
 
-export default Input
+export default PInput;

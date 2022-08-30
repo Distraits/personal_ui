@@ -11,7 +11,7 @@ const components = [
 
 const install = function (Vue, options = {}) {
     // 全局注册所有的组件
-    components.forEach((item) => {
+    components.forEach(item => {
         Vue.component(item.name, item)
     })
 }

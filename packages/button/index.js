@@ -1,7 +1,7 @@
-import Button from "./button";
+import PButton from "./button";
 
-Button.install=(Vue)=>{
-    Vue.component(Button.name,Button)
+PButton.install=function (Vue){
+    Vue.component(PButton.name,PButton)
 }
 
-export default Button
+export default PButton;
