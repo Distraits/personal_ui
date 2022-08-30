@@ -1,4 +1,4 @@
-import PInput from "./input";
+import PInput from "./src/input";
 
 PInput.install=function(Vue){
     Vue.component(PInput.name,PInput)
