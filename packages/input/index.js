@@ -1,7 +1,7 @@
-import input from "./input";
+import Input from "./input";
 
-input.install=(Vue)=>{
-    Vue.component(input.name,input)
+Input.install=(Vue)=>{
+    Vue.component(Input.name,Input)
 }
 
-export default input
+export default Input

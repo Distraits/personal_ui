@@ -1,12 +1,12 @@
-import button from "../packages/button";
-import input from "../packages/input";
+import Button from "../packages/button";
+import Input from "../packages/input";
 
 
 
 // 存储组件列表
 const components = [
-    button,
-    input,
+    Button,
+    Input,
 ]
 
 const install = function (Vue, options = {}) {
@@ -21,8 +21,8 @@ if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue)
 }
 
-export default{
+export {
     install,
-    button,
-    input,
+    Button,
+    Input,
 }
