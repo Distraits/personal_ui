@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: "p_input",
+  name: "pInput",
   props:{
     value: {
       type: [String, Number],
