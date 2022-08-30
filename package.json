@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lib": "vue-cli-service build --target lib src/index.js"
   },
-  "main": "/dist/personal_ui.umd.js",
+  "main": "dist/qike-ui.umd.js",
   "author": "xq",
   "dependencies": {
     "@yzfe/svgicon": "^1.1.0",
