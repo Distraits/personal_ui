@@ -5,15 +5,15 @@ export type ButtonType = 'primary' | 'success' | 'danger'
 /** Button Component */
 export declare class Button {
     /** Button type */
-    type: ButtonType
+    public type: ButtonType
 
     /** Determine whether it's a plain button */
-    plain: boolean
+    public plain: boolean
 
     /** Determine whether it's a round button */
-    round: boolean
+    public round: boolean
 
     /** Disable the button */
-    disabled: boolean
+    public disabled: boolean
 }
 
