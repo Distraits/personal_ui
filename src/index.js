@@ -1,5 +1,5 @@
-import Button from "../packages/button/index.js";
-import Input from "../packages/input/index.js";
+import Button from "../packages/button";
+import Input from "../packages/input";
 
 
 
@@ -10,6 +10,8 @@ const components = [
 ]
 
 const install = function (Vue, options = {}) {
+
+    if (install.installed) return;
     // 全局注册所有的组件
     components.forEach(item => {
         Vue.component(item.name, item)
@@ -21,9 +23,9 @@ if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue)
 }
 
-export default install
 
-export {
+export default{
+    install,
     Button,
     Input,
 }
