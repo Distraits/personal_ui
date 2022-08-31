@@ -1,14 +1,17 @@
 <template>
   <div class="home">
 <!--    <p-button type="primary" round plain disabled>hh</p-button>-->
+<!--    <p-input clearable placeholder="请输入" v-model="val"></p-input>-->
+<!--    <p-icon name="close" @click="get"></p-icon>-->
     <p-input clearable placeholder="请输入" v-model="val"></p-input>
   </div>
 </template>
 
 <script>
 
-import p_button from "../components/p_button/p_button";
-import p_input from "@/components/input/input";
+
+import p_icon from '../../packages/icon'
+import PInput from "../../packages/input";
 export default {
   name: 'HomeView',
   data() {
@@ -17,15 +20,17 @@ export default {
     }
   },
   components:{
-    'p-button':p_button,
-    'p-input':p_input,
+    'p-icon':p_icon,
+    PInput
   },
 
   mounted() {
 
   },
   methods:{
-
+    get(){
+      console.log('==-==--=')
+    }
   }
 }
 </script>

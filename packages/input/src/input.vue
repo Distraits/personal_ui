@@ -7,17 +7,24 @@
         :placeholder="placeholder"
         :disabled="disabled"
         @input="handleInput"
-    >
-    <icon
+    />
+
+    <span
         v-if="clearable && value"
-        @click="clear"
-        class="clear"
-        data="@icon/close.svg"
-        color="#c0c4cc"/>
+        class="clear" @click="clear">
+        <icon
+            name="close"
+            color="#c0c4cc"
+        />
+    </span>
+
+
+
   </div>
 </template>
 
 <script>
+import icon from "../../icon";
 export default {
   name: "PInput",
   props:{
@@ -42,13 +49,18 @@ export default {
       default: false
     }
   },
+  components:{
+    icon
+  },
   methods:{
     handleInput(e){
       this.$emit("input", e.target.value);
     },
     clear(){
+      console.log('------')
       this.$emit("input", '');
-    }
+    },
+
   }
 }
 </script>
@@ -86,8 +98,12 @@ export default {
 
 .clear{
   position: absolute;
-  top: 12px;
+  height: 100%;
+  top: 0;
   right: 12px;
+  line-height: 40px;
+  transition: all 0.3s;
+  text-align: center;
   cursor: pointer;
 }
 

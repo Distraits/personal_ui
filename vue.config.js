@@ -19,7 +19,7 @@ module.exports = defineConfig({
         config.resolve.alias
             .set("@", resolve("examples"))
             .set("assets", resolve("examples/assets"))
-            .set("components", resolve("examples/components"))
+            .set("packages", resolve("packages"))
     },
 
 
