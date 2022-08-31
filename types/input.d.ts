@@ -1,14 +1,12 @@
-import {ButtonType} from "./button";
 
 export type InputType = 'text' | 'textarea'
 
 
-export declare class PInput {
+export declare class Input {
 
     type: InputType
 
     clearable: boolean
-
 
     disabled: boolean
 }

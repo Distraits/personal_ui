@@ -3,7 +3,7 @@
 export type ButtonType = 'primary' | 'success' | 'danger'
 
 /** Button Component */
-export declare class PButton {
+export declare class Button {
     /** Button type */
     type: ButtonType
 
