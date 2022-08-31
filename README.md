@@ -1,19 +1,21 @@
-# personal_ui
+# qike-ui
 
-## Project setup
+## Install
 ```
-npm install
+npm install qike-ui -S
 ```
+## 快速开始
 
-### Compiles and hot-reloads for development
 ```
-npm run serve
-```
+import Vue from 'vue'
+import qike from 'qike-ui'
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Vue.use(qike)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+// or
+import {
+  Button
+  // ...
+} from 'qike-ui'
+Vue.use(Button)
+```
