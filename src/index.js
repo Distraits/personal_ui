@@ -24,7 +24,9 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 
-export default{
+export default install
+
+export{
     install,
     Button,
     Input,
