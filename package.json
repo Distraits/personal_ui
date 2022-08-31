@@ -9,6 +9,11 @@
   },
   "main": "dist/qike-ui.umd.js",
   "author": "xq",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "typings": "./types/index.d.ts",
   "dependencies": {
     "@yzfe/svgicon": "^1.1.0",
     "@yzfe/vue-svgicon": "^4.0.3",
