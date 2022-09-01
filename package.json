@@ -4,8 +4,8 @@
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lib": "vue-cli-service build --target lib src/index.js"
+    "build": "rollup -c",
+    "lib": "vue-cli-service build --target lib --name qike-ui src/index.js"
   },
   "main": "dist/qike-ui.umd.js",
   "author": "xq",
@@ -15,8 +15,14 @@
   ],
   "typings": "./types/index.d.ts",
   "dependencies": {
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
     "core-js": "^3.8.3",
     "path": "^0.12.7",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-scss": "^3.0.0",
     "vue": "^2.6.14",
     "vue-router": "^3.5.1"
   },
@@ -25,11 +31,13 @@
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "@vue/compiler-sfc": "^3.2.38",
     "@yzfe/svgicon-loader": "^1.2.0",
     "@yzfe/vue-cli-plugin-svgicon": "~1.2.1",
+    "rollup-plugin-vue": "^6.0.0",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "^2.7.10"
   },
   "browserslist": [
     "> 1%",
