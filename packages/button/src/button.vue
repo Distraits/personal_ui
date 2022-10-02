@@ -1,5 +1,5 @@
 <template>
-<button class="btn-normal" :class="[`btn-${type}`,{
+<button class="btn-normal" @click="handleClick" :class="[`btn-${type}`,{
   'is-plain':plain,'is-round':round,'is-disabled':disabled
 }]" >
   <slot></slot>
@@ -25,6 +25,11 @@ export default {
     disabled:{
       type:Boolean,
       default: false
+    }
+  },
+  methods: {
+    handleClick (e) {
+      this.$emit('click', e)
     }
   }
 }
